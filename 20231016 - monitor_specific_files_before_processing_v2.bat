@@ -2,11 +2,11 @@
 setlocal enabledelayedexpansion
 
 :: Set variables
-set "folderPath=\\bhxappfs01\InhouseApps\UAT\Blue Yonder\Outbound"  REM Path to the folder to monitor
-set "ssisJobName=Dashboard_CostPriceDeltaOutput"  REM Name of the SQL Server Agent job
+set "folderPath=\\telleion\inhouse\dev\blueprint\Outbound"  REM Path to the folder to monitor
+set "ssisJobName=SQLAgentJobName_XXX"  REM Name of the SQL Server Agent job
 
 :: File patterns to look for
-set "patterns=PMM_DB_IB01_ PMM_DB_IB02_ PMM_DB_ADJ_ PMM_DB_BR02_"
+set "patterns=BMM_DB_IB01_ BMM_DB_IB02_ BMM_DB_ADJ_ BMM_DB_BR02_"
 
 :loop
 :: Initialize an array to keep track of found files
@@ -41,7 +41,7 @@ for %%P in (%patterns%) do (
 
 :: All four files are found; trigger the SSIS job
 echo All required files found. Triggering the SSIS job...
-sqlcmd -S JUNEAU -Q "EXEC msdb.dbo.sp_start_job @job_name = '%ssisJobName%'"
+sqlcmd -S SQLAGENTSERVERNAME -Q "EXEC msdb.dbo.sp_start_job @job_name = '%ssisJobName%'"
 
 :continueWaiting
 :: Pause for a specified time (e.g., 5 minutes)
