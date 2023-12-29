@@ -11,9 +11,16 @@ This script batch monitors the presence of files in folders and triggers an SQL 
 2. [Monitor Specific Files Before Processing](https://github.com/aduohene1990/TechTools/blob/aduohene-tools/20231015%20-%20monitor_files_for_sql_agent_job.bat)
     This batch script is designed to monitor a specific folder for the most recent files that match certain patterns. It then checks if all the specified files are present before triggering a SQL Server Integration.
      Services (SSIS) job.
-  ### Setting Variables:
+  ### 1. Setting Variables:
   folderPath: Specifies the directory to monitor.
-  ssisJobName: Indicates the name of the SQL Server Agent job that should be triggered.  
+  ssisJobName: Indicates the name of the SQL Server Agent job that should be triggered. 
+  ### 2. File Patterns:
+  The script defines different patterns (PMM_DB_IB01_, PMM_DB_IB02_, PMM_DB_ADJ_, PMM_DB_BR02_) to look for in the specified folder.
+  
+  ### 3. Main Loop (: loop):
+    It initialises an empty foundFiles variable to keep track of found files.
+    Then, it iterates through each pattern defined earlier.
+    Within the pattern loop, it looks for the most recent file for each pattern using dir command and saves the file name to mostRecentFile. It appends this file to foundFiles.
   
 
 
