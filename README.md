@@ -7,8 +7,8 @@ This batch script is designed to monitor a specific folder for the most recent f
 This is useful when the availability of files for downstream processing is erratic. So this batch script, when activated, would just wait for the files to arrive and then subsequently start the SQLAgent job.
 
 This script batch monitors the presence of files in folders and triggers an SQL agent to run on the specified server.
-[Monitor Files In Folder](https://github.com/aduohene1990/TechTools/blob/aduohene-tools/20231015%20-%20monitor_files_for_sql_agent_job.bat)
-[Monitor Specific Files Before Processing](https://github.com/aduohene1990/TechTools/blob/aduohene-tools/20231015%20-%20monitor_files_for_sql_agent_job.bat)
+1. [Monitor Files In Folder](https://github.com/aduohene1990/TechTools/blob/aduohene-tools/20231015%20-%20monitor_files_for_sql_agent_job.bat)
+2. [Monitor Specific Files Before Processing](https://github.com/aduohene1990/TechTools/blob/aduohene-tools/20231015%20-%20monitor_files_for_sql_agent_job.bat)
 
 
 
