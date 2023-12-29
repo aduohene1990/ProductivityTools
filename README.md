@@ -20,7 +20,16 @@ This script batch monitors the presence of files in folders and triggers an SQL 
   ### 3. Main Loop (: loop):
     It initialises an empty foundFiles variable to keep track of found files.
     Then, it iterates through each pattern defined earlier.
-    Within the pattern loop, it looks for the most recent file for each pattern using dir command and saves the file name to mostRecentFile. It appends this file to foundFiles.
+    Within the pattern loop, it looks for the most recent file for each pattern using dir command and saves the file name to mostRecentFile. 
+    It appends this file to foundFiles.
+ 
+  ### 4. File Verification Loop:
+    For each pattern, it checks if the respective file is found and outputs its name and extension if found.
+    If any file is missing, it outputs a message indicating that it's waiting for all files and then loops back to the waiting section.
+  ### 5. Triggering SSIS Job:
+    If all the required files are found, it triggers the SSIS job using sqlcmd, executing the stored procedure msdb.dbo.sp_start_job to start the specified job.
+  ### 6. Waiting and Looping:
+    After each iteration, it waits for a specified time (e.g., 5 minutes using timeout) and then returns to the start of the loop to continue monitoring the folder.    
   
 
 
