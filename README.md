@@ -13,7 +13,9 @@ This script batch monitors the presence of files in folders and triggers an SQL 
      Services (SSIS) job.
   ### Setting Variables:
   folderPath: Specifies the directory to monitor.  
+  
   ssisJobName: Indicates the name of the SQL Server Agent job that should be triggered.  
+  
 
 
 
