@@ -12,8 +12,8 @@ This script batch monitors the presence of files in folders and triggers an SQL 
     This batch script is designed to monitor a specific folder for the most recent files that match certain patterns. It then checks if all the specified files are present before triggering a SQL Server Integration.
      Services (SSIS) job.
   ### Setting Variables:
-  folderPath: Specifies the directory to monitor.
-  ssisJobName: Indicates the name of the SQL Server Agent job that should be triggered.
+  folderPath: Specifies the directory to monitor.  
+  ssisJobName: Indicates the name of the SQL Server Agent job that should be triggered.  
 
 
 
