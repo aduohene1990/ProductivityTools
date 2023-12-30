@@ -1,4 +1,4 @@
-# Batch monitor the presence of files at a specified location
+# Batch monitor files at a specified location
 This repository documents productivity tools that can be utilised in daily routines to automate repetitive tasks.
 
 ## Description of what the batch script does.
